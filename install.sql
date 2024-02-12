@@ -1,0 +1,39 @@
+--Installation steps:
+--sqlplus mdtech/Mdtech9591@orcl
+--sqlplus iapphealth@APPSPROD_IAPPHEALTH (login to AWS RDS)
+--SQL> prompt, type "@install.sql "
+--Pre-req of this script is to load all the stagging tables (ext_file) and load json package (json_v1_0_5\json_v1_0_5\install.sql)
+spool install.log
+--@create_common_tables.sql
+--@aws_general_ddl.sql
+--@mdtech_ddl.sql
+--@mdtech_types.typ.sql
+--@modify_ddl.sql
+--@create_seq.sql
+--@mdtech.trg.sql
+--------------------------------------------
+--@global_type.pkg.sql
+--@common.pkg.sql
+--@common_dml.pkg.sql
+--@aws_loc_trans.pkg.sql
+--@mbr_inq.pkg.sql
+--@mbr_trans.pkg.sql
+--@qnr_inq.pkg.sql
+--@mdtech_view.sql
+--@report.pkg.sql
+--@svc_eval.pkg.sql
+--@common_inq.pkg.sql
+--@common_trans.pkg.sql
+--@list_trans.pkg.sql
+--@return_json.pkg.sql
+--@parse_json.pkg.sql
+--@menu.pkg.sql
+--@list_item.pkg.sql
+--@mdtech_trans.pkg.sql
+--@mgmt_report.pkg.sql
+--report_counseling.pkg.sql
+--@compile_invalid_objects.sql
+--@aws_load_location.sql
+--@load_list_trans.sql
+--@delta_script.sql
+spool off
